@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+confd -backend env -confdir $(dirname $0)/../etc/confd -onetime
+nginx -t
+exec nginx "$@"

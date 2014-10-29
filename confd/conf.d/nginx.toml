@@ -1,0 +1,7 @@
+[template]
+prefix = "app"
+src = "nginx.conf.tmpl"
+dest = "/usr/local/nginx/conf/nginx.conf"
+keys = [
+    "/message",
+]
